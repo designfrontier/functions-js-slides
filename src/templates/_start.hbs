@@ -1,0 +1,23 @@
+{{!-- Main title slide --}}
+<section class="section-title" data-transition="{{ theme.specialTransition }}">
+	<h2>{{ title }}</h2>
+	<h3>{{ subtitle }}</h3>
+</section>
+
+{{!-- About the author --}}
+<section>
+	<img class="constrain-width" src="{{ social.profile }}" alt="{{ social.name }}'s avatar'" />
+	<h2>{{ greetingText }}</h2>
+	<p>I am {{ social.name }}</p>
+	<p class="social-links"><a class="social-links__twitter" href="http://twitter.com/{{ social.twitter }}">@{{ social.twitter }}</a> <a href="http://github.com/{{ social.github }}">@{{ social.github }}</a>
+</section>
+
+{{!-- Presentation outline --}}
+<section>
+	<h2>Presentation Overview</h2>
+	<ul>
+		{{#each sections }}
+			<li class="fragment">{{ title }}</li>
+		{{/each }}
+	</ul>
+</section>
