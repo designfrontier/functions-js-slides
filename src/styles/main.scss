@@ -52,6 +52,10 @@ $marginBase: 1rem;
 	font-size: 300%;
 	color: $baseTextColor;
 
+	& .slides {
+		text-align: left;
+	}
+
 	// Branding
 	strong {
 		color: $mainColor;
@@ -127,6 +131,27 @@ $marginBase: 1rem;
 	.section-title {
 		background: $mainColor;
 
+		h1,
+		h2,
+		h4,
+		h5,
+		h6 {
+			color: #fff;
+		}
+
+		h3,
+		ul,
+		ol,
+		p {
+			color: rgba(255, 255, 255, .5);
+		}
+
+		strong {
+			color: #fff;
+		}
+	}
+
+	.end-title {
 		h1,
 		h2,
 		h4,

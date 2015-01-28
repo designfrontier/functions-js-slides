@@ -4,14 +4,27 @@ this["Handlebars"]["Templates"] = this["Handlebars"]["Templates"] || {};
 Handlebars.registerPartial("end", Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
 
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "data-background-image=\"images/";
+  if (helper = helpers.goodbyeImage) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.goodbyeImage); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"\n        	data-background-repeat=\"no-repeat\"\n        	data-background-size=\"100%\"";
+  return buffer;
+  }
 
-  buffer += "\n<section class=\"section-title\" data-background=\""
+  buffer += "\n<section class=\"end-title\" data-background=\""
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.theme)),stack1 == null || stack1 === false ? stack1 : stack1.mainColor)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" data-transition=\""
+    + "\" ";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.goodbyeImage), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "data-transition=\""
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.theme)),stack1 == null || stack1 === false ? stack1 : stack1.specialTransition)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n	<img src=\"images/logo.png\" alt=\"Logo\" />\n	<h2>";
+    + "\">\n	<h2 class=\"end-title\">";
   if (helper = helpers.goodbyeText) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.goodbyeText); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
