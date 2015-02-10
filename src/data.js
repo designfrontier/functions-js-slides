@@ -6,7 +6,7 @@
 
 // Global context for Handlebars templates in `src/templates`
 var data = {
-	
+
 	// ------------------------------------------
 	// CUSTOMIZE BELOW
 	// ------------------------------------------
@@ -183,8 +183,7 @@ var data = {
 					, uniqueContent: '<p>iifes let you create non global storage for your application easily. Use them</p>'
 				}
 				, {
-					uniqueContent: '<blockquote>"By reducing your global footprint to a single name, you significantly reduce the chance of bad interactions with other applications, widgets, or libraries." 
-- Douglas Crockford</blockquote>'
+					uniqueContent: '<blockquote>"By reducing your global footprint to a single name, you significantly reduce the chance of bad interactions with other applications, widgets, or libraries." - Douglas Crockford</blockquote>'
 				}
 				, {
 					title: 'functional purity'
